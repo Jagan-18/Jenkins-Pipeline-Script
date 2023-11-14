@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Code Clone') {
             steps {
-               git credentialsId: 'git', url: 'https://github.com/Jagan-18/Jenkins-Pipeline-Scrip'
+               git credentialsId: 'git', url: 'https://github.com/Jagan-18/Jenkins-Pipeline-Script'
             }
 			}
 		stage('Maven Version') {
@@ -29,7 +29,8 @@ pipeline {
 		stage('Sonar Scan'){
             steps {
              
-			  sh 'mvn sonar:sonar -Dsonar.host.url=http://34.125.17.39:9000 -Dsonar.login=f4c15835285f8abda87d924b32e94d62e2befa76'
+			  sh 'mvn sonar:sonar -Dsonar.host.url=http://3.86.23.131:9000  -Dsonar.login=51f5fa95da2285750a9a85d9e48b69ee845e8b5d'
+                          
 			 }
 			 }			
 			 
